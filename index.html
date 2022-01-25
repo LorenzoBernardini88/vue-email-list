@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <div id="app">
+    <div id="app" v-if="email.length==10">
 
         <div >
             <div v-for="element in email" class="e-mail">{{element}}</div>

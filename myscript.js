@@ -5,6 +5,7 @@ const myApp = new Vue ({
     },
     mounted: function(){
         for (let index = 0; index < 10; index++){
+            
             this.ciclo();
             
         }
@@ -12,13 +13,12 @@ const myApp = new Vue ({
     },
     methods:{
         ciclo : function(){
-            
+                
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then((risposta) => {
-    
-                        this.email.push(risposta.data.response);
+                .then((risposta) =>  {
+                    this.email.push(risposta.data.response);
                     })
-                    .catch(function (error) {
+                .catch(function (error) {
                         
                         console.log(error);
                     })
