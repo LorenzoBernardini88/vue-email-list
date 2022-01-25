@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Email-List</title>
 </head>
 <body>
+    <div id="app">
+
+        <div v-if="email.length==10">
+            <div v-for="element in email" class="e-mail">{{element}}</div>
+        </div>
     
+    </div>
 
 
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="myscript.js"></script>
 </body>
 </html>
