@@ -8,6 +8,7 @@ const myApp = new Vue ({
             this.ciclo();
             
         }
+        console.log(this.email);
     },
     methods:{
         ciclo : function(){
@@ -16,12 +17,11 @@ const myApp = new Vue ({
                 .then((risposta) => {
     
                         this.email.push(risposta.data.response);
-                        console.log(this.email);
                     })
-                .catch(function (error) {
-                
-                    console.log(error);
-                })
+                    .catch(function (error) {
+                        
+                        console.log(error);
+                    })
                 
             
         }
